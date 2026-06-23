@@ -1,8 +1,8 @@
 # Latent-Switch MindSpore Dataset Pipeline
 
-本仓库是《数据工程导论》第43章“推理轨迹数据工程：长链压缩、隐式计算与监督掩码”的配套代码。它把 Latent-Switch 风格数据中的推理轨迹压缩、`latent budget`、`student sequence` 和 `supervision masks` 抽成一个独立的 MindSpore 数据加载实现。
+本仓库将 Latent-Switch 风格数据中的推理轨迹压缩、`latent budget`、`student sequence` 和 `supervision masks` 抽成一个独立的 MindSpore 数据加载实现。
 
-仓库只覆盖数据工程链路：从已蒸馏的 JSONL/Parquet 记录构造 SFT 样本，物化 token span 与监督掩码，并通过 `mindspore.dataset.GeneratorDataset` 输出可训练 batch。它不包含 teacher API 蒸馏、模型训练、模型评测或外部发布入口。
+仓库覆盖数据工程链路：从已蒸馏的 JSONL/Parquet 记录构造 SFT 样本，物化 token span 与监督掩码，并通过 `mindspore.dataset.GeneratorDataset` 输出可训练 batch。它不包含 teacher API 蒸馏、模型训练、模型评测或外部发布入口。
 
 ## 关键词
 
