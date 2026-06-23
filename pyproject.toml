@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latent-switch-mindspore"
+version = "0.1.0"
+description = "MindSpore dataset pipeline for latent-switch reasoning-trace data engineering."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.23",
+    "transformers>=4.40",
+]
+
+[project.optional-dependencies]
+mindspore = ["mindspore"]
+parquet = ["pandas", "pyarrow"]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
